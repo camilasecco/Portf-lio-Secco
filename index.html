@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Camila</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EBE9E1;
+            color: #284022;
+        }
+
+        header {
+            background-color: #284022;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #EBE9E1;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+        }
+
+        .sobre-mim {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 40px;
+        }
+
+        .sobre-mim .texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sobre-mim .imagem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sobre-mim .imagem img {
+            width: 80%; /* Imagem menor */
+            height: auto;
+            max-width: 300px; /* Tamanho fixo máximo */
+        }
+
+        .projetos {
+            padding: 40px;
+        }
+
+        .projeto {
+            margin-bottom: 40px;
+            text-align: center; /* Centralizar conteúdo do projeto */
+        }
+
+        .projeto h3 {
+            margin-bottom: 10px;
+        }
+
+        .projeto .principal {
+            width: 60%; /* Imagem principal menor */
+            height: auto;
+            margin: 0 auto 10px; /* Centraliza a imagem */
+            transition: transform 0.3s ease;
+            max-width: 600px; /* Limitar o tamanho máximo */
+        }
+
+        .projeto .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .projeto .galeria img {
+            width: 100%;
+            height: auto;
+            margin: 10px;
+            max-width: 300px; /* Limitar o tamanho da imagem na galeria */
+            transition: transform 0.3s ease;
+        }
+
+        .projeto .principal:hover, .projeto .galeria img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* Divisória entre os projetos */
+        .divisoria {
+            border-top: 2px solid #284022;
+            margin: 20px 0;
+        }
+
+        .contato {
+            background-color: #284022;
+            color: #EBE9E1;
+            padding: 40px;
+        }
+
+        .contato h2 {
+            margin-bottom: 20px;
+        }
+
+        .contato form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contato label {
+            margin: 10px 0 5px;
+        }
+
+        .contato input, .contato textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contato button {
+            padding: 10px;
+            background-color: #EBE9E1;
+            color: #284022;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contato button:hover {
+            background-color: #d4d2c4;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #EBE9E1;
+            color: #284022;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <img src="https://i.postimg.cc/qR83h8Rt/temp-Image-JZd-R1f.avif" alt="Banner">
+    </section>
+
+    <section id="sobre-mim" class="sobre-mim">
+        <div class="imagem">
+            <img src="https://i.postimg.cc/TPwpXL14/Camila-Secco.jpg" alt="Imagem Camila">
+        </div> 
+        <div class="texto">
+            <h2>Oi, eu sou a Camila!</h2>
+<br>
+            <p>Sou bacharelanda em Design. Sou super criativa e adoro encontrar soluções <br>  inteligentes para desafios. Gosto de trabalhar de forma organizada e ágil, <br> sempre buscando o equilíbrio entre qualidade e entrega dentro dos prazos. <br>  Sou apaixonada por design gráfico e uso ferramentas como Illustrator, <br> Photoshop e Adobe XD para dar vida às minhas ideias. <br> Meu objetivo é criar experiências visuais que realmente <br> conectem e impactem as pessoas.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <!-- Projeto 1 -->
+        <div class="projeto">
+            <h3>Ilustração Tipográfica</h3>
+            <img class="principal" src="https://i.postimg.cc/9XYn57DT/temp-Imageqdx-C4-N.avif" alt="Ilustração Tipográfica">
+            <p>Este projeto envolve a concepção e desenvolvimento de dois pôsteres únicos <br> para promover a série Grey's Anatomy. O foco principal é explorar o potencial expressivo e <br> narrativo da tipografia, destacando seu papel como elemento visual central na comunicação gráfica.</p>
+            <div class="galeria">
+                <img src="https://i.postimg.cc/j5VFK666/temp-Imagevk-Uohs.avif" alt="Imagem 1">
+                <img src="https://i.postimg.cc/MKs3XJbp/temp-Imagee-WEd-MD.avif" alt="Imagem 2">
+            </div>
+        </div>
+
+        <div class="divisoria"></div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto">
+            <h3>Releitura</h3>
+            <img class="principal" src="https://i.postimg.cc/ncTg7DZZ/temp-Images8q-Cwg.avif" alt="Releitura">
+            <p>Este projeto propõe a releitura de um pôster icônico do período do <br> Construtivismo Russo, incorporando a figura de um personagem animado. <br> O objetivo é unir a estética marcante desse movimento artístico à linguagem <br> contemporânea da animação, resultando em uma composição visual <br> que dialogue entre o clássico e o moderno.</p>
+            <div class="galeria">
+                <img src="https://i.postimg.cc/dVNZqtbs/temp-Imagezy3-O5w.avif" alt="Imagem 1">
+                <img src="https://i.postimg.cc/qq5gY7nF/temp-Image0-Kd-Cw8.avif" alt="Imagem 2">
+            </div>
+        </div>
+
+        <div class="divisoria"></div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto">
+            <h3>Bangerz</h3>
+            <img class="principal" src="https://i.postimg.cc/qBw33Tn0/Mockup-Bangerz.jpg
+
+" alt="Bangerz">
+            <p>Este projeto propõe a criação de um design para o disco de vinil do álbum <br> Bangerz de Miley Cyrus, inspirado na estética ousada e vibrante da artista. <br> O objetivo é capturar a energia e a identidade visual do álbum, utilizando elementos gráficos <br> que refletem o estilo único de Miley, criando uma peça que seja tanto um <br> tributo ao álbum quanto um item colecionável.</p>
+            <div class="galeria">
+                <img src="https://i.postimg.cc/J0pHVNmt/Capa-e-contracapa-bangerz.jpg
+
+" alt="Imagem 1">
+                <img src="https://i.postimg.cc/D0v4MC9t/Encarte-bangerz.jpg
+
+" alt="Imagem 2">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        document.querySelectorAll('.projeto img').forEach(img => {
+            img.addEventListener('click', () => {
+                const modal = document.createElement('div');
+                modal.classList.add('modal');
+                const modalImg = document.createElement('img');
+                modalImg.src = img.src;
+                modal.appendChild(modalImg);
+                const closeBtn = document.createElement('button');
+                closeBtn.textContent = 'Fechar';
+                closeBtn.classList.add('close-btn');
+                closeBtn.addEventListener('click', () => modal.remove());
+                modal.appendChild(closeBtn);
+                document.body.appendChild(modal);
+            });
+        });
+    </script>
+
+</body>
+</html>
 
